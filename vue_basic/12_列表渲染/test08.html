@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>原型</title>
+        <!-- 引入Vue -->
+        <script type="text/javascript">
+            // function Student(name,age){
+            //     return {
+            //         name:name,
+            //         age:age
+            //     }
+            // }
+
+            // let student1 = Student("zhangsan",19)
+            // console.log(student1)
+            // let student2 = Student("lisi",20)
+            // console.log(student2)
+
+            // console.log(student1.__proto__==student2.__proto__)
+
+
+            let methodDistrict = {
+                run:function(){
+                    console.log("running")
+                },
+                say:function(){
+                    console.log("say")
+                }
+            }
+
+            function Student(name,age){
+                return {
+                    name:name,
+                    age:age,
+                    method:methodDistrict
+                }
+            }
+
+            let student1 = Student("zhangsan",11)
+            console.log(student1)
+            console.log(student1.method.run())
+            console.log(student1.method.say())
+
+
+        </script>
+    </head>
+<body>
+    
+</body>
+</html>

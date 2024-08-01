@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<title>数据绑定</title>
+		<!-- 引入Vue -->
+		<script type="text/javascript" src="../js/vue.js"></script>
+	</head>
+	<body>
+		
+		<div id="root">
+			单项数据绑定：<input type="text" :value="name"/>
+            <br>
+            双向绑定：  <input type="text" v-model = "name"/>
+		</div>
+	</body>
+
+	<script type="text/javascript">
+		Vue.config.productionTip = false //阻止 vue 在启动时生成生产提示。
+
+		new Vue({
+			el:'#root',
+			data:{
+				name:'iloveyou'
+			}
+		})
+	</script>
+</html>
