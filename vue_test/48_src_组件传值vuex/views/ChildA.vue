@@ -4,12 +4,13 @@
 </template>
 
 <script>
-import { EventBus } from "../eventBus";
+import { mapActions } from "vuex";
 
 export default {
   methods: {
+    ...mapActions(["updateSharedData"]),
     sendData() {
-      EventBus.$emit("data-sent", "some data from Child A");
+      this.updateSharedData("some data from Child A");
     },
   },
 };
