@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="example">
-      <p>Yhis is a scoped style example.</p>
+      <p>this is a scoped style example.</p>
     </div>
     <scoped-example />
   </div>
