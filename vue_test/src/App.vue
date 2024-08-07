@@ -1,17 +1,14 @@
 <template>
   <div>
-    <div class="example">
-      <p>this is a scoped style example.</p>
-    </div>
-    <scoped-example />
+    <vote />
   </div>
 </template>
 
 <script>
-import ScopedExample from "./views/ScopedExample.vue";
+import Vote from "./views/Vote.vue";
 export default {
   name: "App",
-  components: { ScopedExample },
+  components: { Vote },
   data() {
     return {};
   },
